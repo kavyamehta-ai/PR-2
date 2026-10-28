@@ -1,0 +1,26 @@
+DERIVABLE JUDGEMENT — ANALYSIS SUMMARY
+==========================================
+Rows analyzed: 600
+Significance level: 0.05
+Dataset: synthetic, for educational use only.
+
+95% confidence intervals for means:
+- age: mean=50.65; 95% CI [49.16, 52.13]
+- weight: mean=68.52; 95% CI [67.53, 69.52]
+- bmi: mean=23.59; 95% CI [23.21, 23.97]
+- blood_pressure: mean=117.03; 95% CI [115.77, 118.29]
+- cholesterol_level: mean=178.88; 95% CI [176.53, 181.22]
+- glucose_level: mean=94.87; 95% CI [93.69, 96.05]
+
+Hypothesis tests:
+- Smoking status vs diabetes (Chi-square test): statistic=0.0910, p=0.95552; Fail to reject H0.
+  Insufficient evidence of an association at the 5% level.
+- BMI by diabetes status (Welch two-sample t-test): statistic=1.7472, p=0.15297; Fail to reject H0.
+  Insufficient evidence of a mean BMI difference at the 5% level.
+- Glucose level across age groups (one-way ANOVA): statistic=24.3604, p=0.00000; Reject H0.
+  At least one age-group mean differs significantly at the 5% level.
+
+Pearson correlation (age vs BMI): r=0.1612, p=0.00007
+Sample covariance (age vs BMI): 14.0772
+
+Reminder: statistical association does not establish causation. Do not use synthetic results for clinical decisions.

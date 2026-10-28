@@ -1,0 +1,104 @@
+{
+  "dataset": {
+    "rows": 600,
+    "columns": 15,
+    "note": "Synthetic educational dataset; not real patient data."
+  },
+  "confidence_intervals_95": {
+    "age": {
+      "n": 600,
+      "mean": 50.645,
+      "lower": 49.16375764812228,
+      "upper": 52.12624235187773
+    },
+    "weight": {
+      "n": 600,
+      "mean": 68.52166666666666,
+      "lower": 67.52729952561828,
+      "upper": 69.51603380771505
+    },
+    "bmi": {
+      "n": 600,
+      "mean": 23.59,
+      "lower": 23.21103371512757,
+      "upper": 23.96896628487243
+    },
+    "blood_pressure": {
+      "n": 600,
+      "mean": 117.02883333333334,
+      "lower": 115.77096448068724,
+      "upper": 118.28670218597944
+    },
+    "cholesterol_level": {
+      "n": 600,
+      "mean": 178.878,
+      "lower": 176.531083026755,
+      "upper": 181.22491697324497
+    },
+    "glucose_level": {
+      "n": 600,
+      "mean": 94.8685,
+      "lower": 93.68773766334543,
+      "upper": 96.04926233665456
+    }
+  },
+  "hypothesis_tests": [
+    {
+      "name": "Smoking status vs diabetes (Chi-square test)",
+      "H0": "Smoking status and diabetes status are independent in this sample.",
+      "H1": "Smoking status and diabetes status are associated in this sample.",
+      "test_statistic": 0.0910030884112456,
+      "degrees_of_freedom": 2,
+      "p_value": 0.9555181270543508,
+      "alpha": 0.05,
+      "decision": "Fail to reject H0",
+      "interpretation": "Insufficient evidence of an association at the 5% level.",
+      "contingency_table": {
+        "false": {
+          "Former Smoker": 92,
+          "Non-Smoker": 364,
+          "Smoker": 139
+        },
+        "true": {
+          "Former Smoker": 1,
+          "Non-Smoker": 3,
+          "Smoker": 1
+        }
+      }
+    },
+    {
+      "name": "BMI by diabetes status (Welch two-sample t-test)",
+      "H0": "Mean BMI is equal for records with and without diabetes.",
+      "H1": "Mean BMI differs between records with and without diabetes.",
+      "mean_diabetes": 26.1,
+      "mean_no_diabetes": 23.56890756302521,
+      "test_statistic": 1.7471784165668138,
+      "p_value": 0.15297438930376467,
+      "alpha": 0.05,
+      "decision": "Fail to reject H0",
+      "interpretation": "Insufficient evidence of a mean BMI difference at the 5% level."
+    },
+    {
+      "name": "Glucose level across age groups (one-way ANOVA)",
+      "H0": "Mean glucose level is equal across all age groups.",
+      "H1": "At least one age group has a different mean glucose level.",
+      "test_statistic": 24.360409589796664,
+      "p_value": 1.0886864788197573e-18,
+      "alpha": 0.05,
+      "decision": "Reject H0",
+      "interpretation": "At least one age-group mean differs significantly at the 5% level."
+    }
+  ],
+  "correlation": {
+    "variables": [
+      "age",
+      "bmi"
+    ],
+    "pearson_r": 0.16121028260611278,
+    "p_value": 7.291498322517778e-05,
+    "interpretation": "Positive linear correlation; p-value is below 0.05."
+  },
+  "covariance": {
+    "age_bmi_sample_covariance": 14.07724540901502
+  }
+}
